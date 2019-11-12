@@ -1,0 +1,162 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>代码接龙</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/slideshow.css" /> -->
+    <link rel="stylesheet" type="text/css" href="../css/index.css" />
+    <link rel="stylesheet" type="text/css" href="../css/font/iconfont.css" />
+    <script type="text/javascript" src="../jquery/jquery-3.4.1.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!--导航栏-->
+    <div id="top">
+        <!-- <select id="quyu" class="not-arrow">
+        <option>不限</option>
+        <option>c</option>
+        <option>java</option>
+        <option>Basic</option>
+        </select> -->
+
+        <!-- <input type="text" class="search" placeholder="搜索">
+        <input type="button" name="search" id="search" class="btn" onclick="seacch()"> -->
+        <ul id="header">
+            <li>
+                <div class="search">
+                    <input type="text" id="input_search" placeholder="search">
+                    <em class="iconfont icon-sousuo"></em>
+                </div>
+                <div id="tip">
+                </div>
+            </li>
+            <li>
+                <em class="iconfont shoucang"></em>
+                <a href="MyCollection.html"> 我的收藏 </a>
+            </li>
+            <li>
+                <em class="iconfont xiangmu"></em>
+                <a href="MyCreateProject.html">我创建的项目</a>
+            </li>
+            <li>
+                <em class="iconfont login"></em>
+                <a id="login"> 登陆 | 注册</a>
+            </li>
+        </ul>
+    </div>
+    <!--登陆-->
+    <div class="mypop" style="display: none">
+        <div class="graybox"></div>
+        <div class="popbox">
+            <div class="poptop">
+                <h3>登录</h3>
+                <div>
+                    <a href="javascript:void(0);" class="close" style="padding-top:10px;padding-right: 10px"><img
+                            style="width: 30px;height: 30px;" src="../img/close-circle.png"></a>
+                </div>
+            </div>
+            <div class="popcon">
+                <div>
+                    <!--                <div class="group">-->
+
+                    <!--                    <input id="uname"  type="text" value="请输入昵称" onFocus="if(value=='请输入昵称') {value=''}" onBlur="if(value==''){value='请输入昵称'}">-->
+
+                    <!--                    <i class="fa fa-user"></i>-->
+
+                    <!--                </div>-->
+                    <div class="group">
+                        <input id="denglu" type="text" value="请输入手机号码" onFocus="if(value=='请输入手机号码') {value=''}"
+                            onBlur="if(value==''){value='请输入手机号码'}">
+                        <i class="fa fa-user"></i>
+                    </div>
+
+                    <div class="group">
+                        <input type="text" id="yzm" style="width: 60%" value="请输入验证码"
+                            onFocus="if(value=='请输入验证码') {value=''}" onBlur="if(value==''){value='请输入验证码'}">
+                        <button id="code" style="width: 35%;float: right;margin-top: 20px"
+                            onclick="yzm()">发送验证码</button>
+                        <i class="fa fa-lock"></i>
+                    </div>
+                </div>
+
+                <div class="remember clearfix">
+                    <div class="remember-con">
+                        <input type="checkbox" id="input1" class="inputbox">
+                        <label for="input1">记住密码</label>
+                    </div>
+                    <div class="remember-con">
+                        <a href="javascript:void(0);" class="code"><i class="fa fa-question-circle"></i>忘记密码</a>
+                    </div>
+                </div>
+            </div>
+            <div class="divbtn clearfix" style="margin: 0 auto">
+                <a href="javascript:void(0);" class="btn" id="cancel">取消</a>
+                <a class="btn ok" onclick="denglu()">登陆/注册</a>
+            </div>
+
+        </div>
+
+    </div>
+    <!--轮播-->
+    <div class="al" id='al'>
+        <div id="title">
+            <h1>Code</h1>
+            <p>代码接龙、多人协作开发项目</p>
+            <button type="button" class="create">
+                <img src="../img/jia.png" width="18px" height="18px" />
+                创建代码
+            </button>
+        </div>
+        <div class="screen" id="screen">
+            <ul id="ul">
+                <!-- <li><img src="../img/slide1.jpg" width="100%" height="500px" /></li>
+                <li><img src="../img/slide2.gif" width="100%" height="500px" /></li>
+                <li><img src="../img/slide3.jpg" width="100%" height="500px" /></li> -->
+            </ul>
+        </div>
+    </div>
+
+    <div class="hot" id="hot">
+        <div id="lg_title">
+            <img src="../img/hot.png" id="tite_img" />
+            <p id="ti">热门推荐</p>
+        </div>
+        <div class="hot_spot" id="recommend">
+            <!-- <li class="child_spot">
+                <div class="title">
+                    <a href="cntn0project.html" class="a2" style="font-size: 25px"> 回溯法求0-1背包问题</a>
+                </div>
+                <div class="describle">此处为热点描述</div>
+
+                <div class="per">
+                    <img src="../img/img1.jpg" class="avatar">
+                    <a href="" class="username">voctory</a>
+                </div>
+            </li> -->
+        </div>
+    </div>
+</body>
+<script>
+    function dowith() {
+
+        var img = document.getElementById("img11");
+        if (img.src.match("fire")) {
+            img.src = "../img/fill.png";
+        }
+        else {
+            img.src = "../img/fire.png";
+        }
+    }
+</script>
+<script src="../js/Carousel.js"></script>
+<script type="text/javascript" src="../js/page/index.js"></script>
+<script type="text/javascript" src="../js/page/Ajaxfun.js"></script>
+<script type="text/javascript" src="../js/page/fstvlproject2.js"></script>
+
+</html>

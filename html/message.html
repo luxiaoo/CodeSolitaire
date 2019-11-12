@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="op()">
+<hr style="border: 1px solid;color: orange">
+<script>
+    function op(){
+        var uname="voctory123";
+        var chat="今天是个艳阳天";
+        var dtime="19/08/30";
+
+        //无评论提示空空如也or图片
+        for( var i=0;i<=10;i++){
+            var div1=document.createElement("div");
+            var img=document.createElement("img");
+            var div2=document.createElement("div");
+            var div3=document.createElement("div");
+            var div4=document.createElement("div");
+            var div5=document.createElement("div");
+            var div6=document.createElement("div");
+            var btn=document.createElement("button")
+            var a=document.createElement("a");
+
+            div1.style="height: 100%;width: 98%;border-bottom: 1px darkgray dashed;font-family: 黑体;line-height: 35px;margin:0 auto;position: relative;float: right;"
+            div1.appendChild(img)
+            img.src="../img/微信图片_201908071913142.jpg";
+            img.style="height: 30px;width: 30px;border-radius: 45%;  position: relative;float: left;margin-top: 2px";
+            div1.appendChild(div3);
+            div3.appendChild(a);
+            div3.style=" position: relative;float: left;height: 30px;width: 90px;  margin-left: 5px;"
+            a.innerHTML=uname;
+            a.style=" text-decoration:none";
+            a.href=""
+            div1.appendChild(div2);
+            div2.innerHTML="回复："
+            div2.style=" position: relative;float: left;height: 30px;width: 50px;"
+            div1.appendChild(div4);
+            div4.innerHTML=chat;
+            div4.style= "position: relative;float: left;height: 35px;width: 30%;  margin-left: 5px;"
+            div1.appendChild(div5);
+            div5.appendChild(btn);
+            btn.innerHTML="查看详情"
+            btn.onclick=function(){
+
+            }
+            btn.style="margin-right: 30px;position: relative;float: right;margin-top: 5px";
+            div1.appendChild(div6);
+            div6.innerHTML=dtime;
+            div6.style="position: relative;float: right;margin-right: 20px;color: #9d9d9d;line-height: 25px"
+            document.body.appendChild(div1);
+
+        }
+    }
+</script>
+</body>
+
+</html>

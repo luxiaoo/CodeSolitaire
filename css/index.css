@@ -1,0 +1,227 @@
+*{ padding:0; margin:0; list-style:none; border:0;}
+
+#top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 150;
+    background-color:rgba(241,90,61,0.92);
+}
+
+
+#header{
+    list-style:none; 
+    margin: 0px; 
+    padding: 0px;
+    width: auto;
+    float: right;
+}
+
+#header li{
+    float: left;
+    margin:10px 30px;
+    padding: 5px;
+}
+
+#header li a{
+    margin: 5px;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search{
+    position: relative;
+    width: 230px;
+    height: 30px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0);
+    border: solid 1px rgb(255,255,255);
+}
+
+
+
+#tip{
+    width: 210px;
+    height: 100px;
+    margin:0 auto;
+    background-color: ivory;
+    display: none;
+}
+
+.hot_tip{
+    
+}
+
+
+#input_search{
+    position: absolute;
+    background: rgba(255, 255, 255, 0);
+    background:none;  
+    outline:none;  
+    border:none;
+    left: 15px;
+    top: 4px;
+    color: white;
+}
+
+.icon-sousuo{
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+
+/*轮播图*/
+
+.al{
+    width:100%;
+    height:530px;
+    position: relative;
+    padding:0px;
+    box-shadow: #dcd8d8 5px 5px 15px 5px;
+    background-color: rgb(43, 49, 60);
+}
+
+
+h1{
+    font-size: 5.5em;
+    color: rgb(255,255,255);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+p{
+    margin-left: 45px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #f2777a;
+}
+
+.create{
+    margin-top: 20px;
+}
+
+#title{
+    z-index: 100;
+    position: absolute;
+    top: 30%;
+    left: 26%;
+}
+
+#arr span{ 
+    width:40px; height:40px; 
+    position:absolute; 
+    left:5px; top:50%; 
+    margin-top:-20px; 
+    background:#000; 
+    cursor:pointer; 
+    line-height:40px; 
+    text-align:center; 
+    font-weight:bold; 
+    font-family:'黑体'; 
+    font-size:30px; color:#fff; 
+    opacity:0.3; border:1px solid #fff;
+}
+
+.al button{
+    margin: 20px;
+    width: 200px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    border-radius:6px;
+    border: none;
+    background:rgb(78, 78, 78);
+    color: #FFFFff;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.al button:hover{
+    border: solid 1px lightgrey;
+}
+
+.hot {
+    position: relative;
+    width:100%;
+    margin: 0 auto;
+    background-color: #f4f2ed;
+}
+
+#lg_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ti {
+    position: relative;
+    font-size: 2rem;
+    font-weight: 200;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 20px;
+    color: black;
+    display: inline-block;
+}
+
+/* 热门推荐 */
+.hot_spot{
+    border-radius: 6px;
+    margin: 5px 20px;
+}
+
+#tite_img{
+    width: 25px;
+    height: 25px;
+}
+
+.child_spot{
+    width: 100%;
+    border-color: #cccccc;
+    margin: 15px auto;
+    list-style:none;
+    border-radius: 15px;
+    padding: 20px 15px;
+    background-color: #eae8e880;
+}
+
+.child_spot:hover{
+    box-shadow: 5px 10px 13px 2px rgba(0,0,0,0.1)
+}
+
+.describle{
+    padding: 10px 45px ;
+}
+
+.avatar{
+    width: 30px;
+    width: 30px;
+}
+
+.per .username{
+    margin-left: 5px;
+    color: grey;
+}
+
+.subTitle{
+    font-size: 25px;
+    font-weight: 200;;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

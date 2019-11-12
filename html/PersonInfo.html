@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .info{
+            margin: 0  auto;
+            font-family: 等线;
+            height: 60%;width: 35%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+        .infoimg{
+            margin: 0 auto;
+            width: 25%;
+            height: 20%
+        }
+    </style>
+</head>
+
+<body id="1" >
+
+<hr style="border: 1px solid;color: orange;margin-top:10px" >
+<!--<div><a target="view_window" onclick="mn()"><input type="button"value="返回首页"></a></div>-->
+<!--<h3 style="text-align: center">基本信息</h3>-->
+<div class="infoimg"><img src="../img/基本信息1.png"style="width: 99%; height: 99%;"/></div>
+<div class="info">
+
+<table >
+    <tr>
+        <td colspan="2">
+            <a href="{:U('Imgtable/delImage')}?id={$kk.id}" onClick="return confirm('头像修改')">
+                <img src="../img/img1.jpg" style="border-radius: 100%;width:30%;height: 30%">
+            </a>
+            <!--<input type="button"value="修改头像">-->
+        </td>
+    </tr>
+    <tr>
+        <td>昵称：</td>
+    <td><input type="text" name="txt"/></td>
+    </tr>
+    <tr>
+        <td>手机号：</td>
+        <td><input type="text" name="txt"/></td>
+    </tr>
+    <tr>
+    <td>地区：</td>
+    <td><input type="text" name="txt"/></td>
+    </tr>
+    <tr>
+    <td>生活态度：</td>
+    <td><input type="type" name="txt"/></td></tr>
+    <tr><td>热爱的语言：</td>
+        <td><select name="fastvl" id="fastvl">
+            <option value="c">C语言</option>
+            <option value="c">Java</option>
+            <option value="c">Basic</option>
+            <option value="c">Python</option>
+        </select></td></tr>
+</table>
+</div>
+<div style="margin: 0 auto;width: 20% ;padding-top: 30px">
+<input type="button"  value="保存"  name="txt" style="text-align: center;background-color: white;border-color: orange;width: 80px;height: 30px;border-radius: 45px;"/>
+</div>
+</body>
+<script>
+    function mn()
+    { document.getElementById("1").innerHTML = '<iframe  src="index2.html"    data="index2.html" width="100%" height="1000px" frameborder="no" scrolling="no"></iframe>'}
+</script>
+</html>

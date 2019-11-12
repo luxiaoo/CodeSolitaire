@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>参与项目</title>
+</head >
+<body onload="op2()">
+<hr style="border: 1px solid;color: orange;margin-top:10px" >
+<p style="width: 40px;height: 30px;position: relative;float: left;"></p>
+</div>
+<script>function op2() {
+    var num = 10;
+    var uname="nan啦啦啦";
+    var userp="../img/微信图片_201908071913145.jpg";
+    var pname="这是一个很正经的题目";
+    var ctime=" 2019年3月20日";
+    var like="9980";
+    var din="lalalalallalalalalallala<p/>"+"此处有很正经的代码存在的<p/>"+"hhhhhhh<p/>"
+    var div1 = document.createElement("div");
+
+    div1.style = "width:98%;opacity:0.6;line-height:30px;margin-bottom:15px;background:darksalmon;box-shadow: darksalmon 5px 5px 15px 1px;height: 30px;color:black;font-family: 楷体;text-align: -moz-left";
+    div1.innerHTML = "&nbsp;您的\"代码接龙\"生涯中，共参与了" + num + "个项目";
+    document.body.appendChild(div1);
+
+    var div12 = document.createElement("div");
+    var a=document.createElement("a");
+
+    for(var i=1;i<=num;i++) {
+        var div2 = document.createElement("div");
+        var div3 = document.createElement("div");
+        var img1=document.createElement("img");
+        var div4 = document.createElement("div");
+        var div5 = document.createElement("div");
+        var div6 = document.createElement("div");
+        var div7 = document.createElement("div");
+        var div8 = document.createElement("div");
+        var div9 = document.createElement("div");
+        var img2=document.createElement("img");
+        var div10 = document.createElement("div");
+        var div11 = document.createElement("div");
+        var btn1=document.createElement("button")
+
+        var diva = document.createElement("div");
+
+
+        div1.appendChild(div2);
+        div2.style = "width: 100%;height:auto;margin:0 auto;margin-left: 10px;margin-bottom:15px;";
+        div2.appendChild(div3);
+        div2.appendChild(img1);
+        img1.src = userp;
+        img1.style = "width: 40px;height: 40px;position: relative;float: left;border-radius: 90%;padding-top: 3px;padding-left:3px;"
+
+        div2.appendChild(div4);
+        div4.style = "line-height: 40px;position: relative;float: left;padding-top: 5px;padding-left: 5px;font-family: 楷体"
+        div4.innerHTML = uname;
+
+        div2.appendChild(div5);
+        div5.style = "position: relative;width: 100%;float: left;height: 50px;width:98%;font-size: 25px;font-family: 楷体;padding-left: 40px;";
+        div5.innerHTML = pname;
+
+        div2.appendChild(div6);
+        div6.style = "position: relative;width: 100%;float: left;width:98%;font-size:20PX;font-family: 楷体;padding-left: 40px;line-height: 40px;"
+        div6.innerHTML = "续写内容：";
+
+        div2.appendChild(div7);
+        div7.style = "position: relative;float:left;height: 200px;width:90%;font-size: larger;font-family: 楷体;border:1px lightgray dashed;margin-left: 3%;"
+        div7.innerHTML = din;
+
+        div2.appendChild(diva)
+        diva.style="position: relative;float: left;height: 40px;width:100px;font-size: large;font-family: 楷体;line-height: 40px;padding-left: 40px"
+        diva.innerHTML="续写时间："
+
+        div2.appendChild(div8);
+        div8.style = "position: relative;float: left;height: 40px;width:30%;font-size: large;font-family: 楷体;line-height: 40px;"
+        div8.innerHTML = ctime;
+
+        div2.appendChild(div10);
+        div10.style = "position: relative;float:right; ;height: 40px;line-height: 30px;color: gray;padding-right: 15%"
+        div10.innerHTML = like;
+
+        div2.appendChild(div9);
+        div9.style = "position: relative;float:right;height: 40px;font-size: larger;font-family: 楷体;padding-right: 10px"
+        div9.appendChild(img2);
+        img2.src = "../img/fire2.png";
+        img2.style = "height: 30px;width: 30px"
+
+        div2.appendChild(div11);
+        div11.style = "position: relative;float: left;text-align: center;width:98%;opacity:0.6;line-height:30px;background:lightgray;height: 30px;color:black;font-family: 楷体;margin-top:5px;margin-bottom:30px"
+        div11.appendChild(btn1);
+        btn1.style = "background: none;border:none;font-family: 楷体;font-size: 18px;"
+        btn1.innerHTML = "查看本篇详情";
+        btn1.onclick = function () {
+
+        }
+
+        document.body.appendChild(div2);
+
+    }
+    div11.appendChild(div12);
+    div12.style="text-align: center ;align-content: center;font-family: 楷体;color:black;margin-top:10px"
+    div12.innerHTML="到底了哦";
+    // div12.appendChild(a);
+    // a.style="text-align: center ;align-content: center;font-family: 楷体;text-decoration:none;"
+    // a.href="#div2";
+    // a.innerHTML="回到顶部";
+    document.body.appendChild(div11);
+
+
+}
+
+</script>
+</body>
+</html>

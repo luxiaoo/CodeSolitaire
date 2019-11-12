@@ -1,0 +1,109 @@
+
+.tab{width:700px;
+    height: 40px;
+    position: relative;
+    /*float: bottom;*/
+    padding-top: 70px;
+    left: 1px;
+}
+
+/*图片轮播*/
+
+*{ padding:0; margin:0;}
+
+#all{
+    position: relative;
+    margin:5px auto;
+    width:600px;
+    height:255px;
+}
+span{
+    width:40px;
+    height:40px;
+    position:absolute;
+    left:5px;
+    top:50%;
+    margin-top:-20px;
+    background:#000;
+    line-height:40px;
+    text-align:center;
+    font-weight:bold;
+    font-size:30px;
+    color:#fff;
+    opacity:0.3;
+    border:1px solid #fff;
+    cursor: pointer;
+}
+.right{right:5px;left: auto; }
+
+
+/*热点*/
+
+
+
+
+
+.hot2{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.other1{
+    padding-top: 10px;
+    width: 95%;
+}
+
+a{text-decoration:none;
+    color: black}
+.a1{float: left;
+    color: darkgrey}
+.a2{color: black;font-family: 楷体;}
+.one{
+    width: 30px;
+    height: 30px;
+    align-items:center;
+    float: left;
+    position: relative;
+}
+.two{width: 30px;
+    height: 30px;
+    padding-left: 8px;
+    padding-top: 10px;
+    text-align: center;
+    position: relative;
+    float: left;}
+.masg1{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    float: right;
+}
+.masg2{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    float: right;
+}
+.fire1{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    float: right;
+
+    padding-right: 35px;
+}
+.fire2{width: 35px;
+    height: 30px;
+    padding-top: -1px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    text-align: center;
+    position: relative;
+    float: left;}
+.img{width: 35px;
+    height: 30px;
+    padding-top: -1px;
+    padding-bottom: 2px;
+    padding-right: 5px;
+    text-align: center;
+    position: relative;
+    float: left;}

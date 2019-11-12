@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>弹出框</title>
+
+    <style>
+        * {
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+        .flex-container {
+
+            display: -webkit-flex;
+
+            display: flex;
+
+            -webkit-justify-content: space-between;
+
+            justify-content: space-between;
+
+        }
+
+        .window {
+
+            width: 30%;
+            height: 40%;
+
+            padding-bottom: 20px;
+
+            background-color: #fff;
+
+            position: fixed;
+
+            display: none;
+
+            margin-bottom: 100px;
+
+            border: 1px solid #E0DFDF;
+
+        }
+
+        .add_btn {
+
+            height: 1400px;
+
+            cursor: pointer;
+
+        }
+
+        .btn_text {
+
+            width: 80px;
+
+            height: 40px;
+
+            line-height: 40px;
+
+            text-align: center;
+
+            color: #fff;
+
+            position: absolute;
+
+            top: 50%;
+
+            left: 50%;
+
+            margin-top: -40px;
+
+            margin-left: -20px;
+
+            background-color: #FDDB54;
+
+        }
+
+        .border_add_nav {
+
+            width: 100%;
+
+            border-bottom: 1px solid #E0DFDF;
+
+        }
+
+        .border_add_nav_box {
+
+            width: 90%;
+
+            margin: 0 auto;
+
+            font-size: 16px;
+
+        }
+
+        .border_add_main_content {
+
+            width: 100%;
+
+            margin-left: 5%;
+
+            margin-bottom: 3%;
+
+            overflow: hidden;
+
+            overflow-y: auto;
+
+        }
+
+        .border_add_btn_box {
+
+            width: 90%;
+
+            height: 100%;
+
+            margin: 0 auto;
+
+            overflow: hidden;
+
+        }
+
+        .add_title {
+
+            color: #20AAE4;
+
+        }
+
+        .name,
+
+        .input {
+
+
+            float: left;
+
+        }
+
+        .input {
+
+            width: 30px;
+
+            height: 30px;
+
+            text-align: center;
+
+            outline: none;
+
+            appearance: none;
+
+            -moz-appearance: none;
+
+            border-radius: 4px;
+
+            border: 1px solid #c8cccf;
+
+            color: #000;
+
+        }
+
+        .cancel,
+
+        .save {
+
+            width: 80px;
+
+            height: 40px;
+
+            line-height: 40px;
+
+            float: left;
+
+            color: #fff;
+
+            text-align: center;
+
+            border-radius: 5%;
+
+            cursor: pointer;
+
+        }
+
+        .cancel {
+
+            margin-right: 10px;
+
+            background: #E0DFDF;
+
+        }
+
+        .save {
+
+            background: #20AAE4;
+
+        }
+
+        .mask {
+
+            position: absolute;
+
+            top: 0;
+
+            display: none;
+
+            background-color: rgba(0, 0, 0, 0.5);
+
+        }
+
+        .name {
+            padding-top: 15px;
+            width: 90%;
+            font-family: 楷体;
+            line-height: 30px;
+            /*font-size: 15px;*/
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="add_btn" id="btn_center">
+
+        <div class="btn_text">
+
+            <span>添加</span>
+
+        </div>
+
+    </div>
+
+    <div class="mask"></div>
+
+    <div class="window" id="center">
+
+        <div class="border_add_nav">
+
+            <div> </div>
+
+            <div class="border_add_nav_box flex-container">
+
+                <span class="add_title">续写</span>
+
+                <button class="close_btn"><img src="../img/关闭.png" style="height: 10px;width: 10px" /></button>
+
+            </div>
+
+        </div>
+
+        <div class="border_add_main_content">
+
+            <div class="border_add_main_content_box">
+                <!--            <div>-->
+                <!--                <div class="name">-->
+                <!--                    -->
+                <!--                </div>-->
+                <!--            </div>-->
+
+                <span class="name">由于本篇文章由多人进行续写,您可分层进行查看，选择需要层</span>
+                <!--            <input class="input" style="height: 20px" type="text">-->
+                <span class="name">当前位于第x层</span>
+                <p></p>
+                <span class="name">续写层：
+
+                    <select class="in">
+
+                        <option value="1">1</option>
+
+                        <option value="2">2</option>
+
+                        <option value="3">3</option>
+
+                        <option value="4">4</option>
+
+                    </select>
+                </span>
+
+
+
+                <div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="border_add_btn_box">
+
+            <div class="pull-right" style="float:right;padding-top: 5%">
+
+                <div class="cancel">取消</div>
+
+                <a class="cancel" href="cntnwproject.html" style="text-decoration:none">续写</a>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script type="text/javascript" src="../jquery/jquery-3.4.1.js"></script>
+    <script typet="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+        $(window).ready(function () {
+
+            $("#btn_center").click(function () {
+
+                $('.mask').css('display', 'block');
+
+                $('.mask').css('width', $(window).width())
+
+                $('.mask').css('height', $(document).height())
+
+                popCenterWindow();
+
+            });
+
+        });
+
+        //获取窗口的高度
+
+        var windowHeight;
+
+        //获取窗口的宽度
+
+        var windowWidth;
+
+        //获取弹窗的宽度
+
+        var popWidth;
+
+        //获取弹窗高度
+
+        var popHeight;
+
+
+
+        function init() {
+
+            windowHeight = $(window).height();
+
+            windowWidth = $(window).width();
+
+            popHeight = $(".window").height();
+
+            popWidth = $(".window").width();
+
+        }
+
+        //关闭窗口的方法
+
+        function closeWindow() {
+
+            $(".close_btn").click(function () {
+
+                $('.window').hide("slow");
+
+                $('.mask').css('display', 'none');
+
+            });
+            $(".cancel").click(function () {
+
+                $('.window').hide("slow");
+
+                $('.mask').css('display', 'none');
+
+            });
+
+        }
+
+        //定义弹出居中窗口的方法
+
+        function popCenterWindow() {
+
+            init();
+
+            //计算弹出窗口的左上角X的偏移量
+
+            var popX = (windowWidth - popWidth) / 2;
+
+            // 计算弹出窗口的左上角Y的偏移量为窗口的高度 - 弹窗高度 / 2 + 被卷去的页面的top
+
+            var popY = (windowHeight - popHeight) / 2 + $(document).scrollTop();
+
+            //设定窗口的位置
+
+            $("#center").css("top", popY).css("left", popX).slideToggle("fast");
+
+            closeWindow();
+
+        }
+
+        function op() {
+            document.write()
+
+        }
+
+    </script>
+
+</body>
+
+</html>

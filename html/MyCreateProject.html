@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+    <script type="text/javascript" src="../js/divshow.js"></script>
+    <link rel="import" href="my2.html" id="page1"/>
+    <link rel="import" href="information2.html" id="page2"/>
+    <style>
+        /*头像*/
+        .mytop{
+            height: 150px;
+            background: orange;
+        }
+        a{text-decoration:none;
+            color:grey;
+            font-family: 楷体;
+            font-size: 15px;
+            margin-left: 30px;
+            line-height: 40px;
+        }
+        a:hover{text-decoration:none;
+            color: white;
+            font-family: 楷体;
+            font-size: 15px;
+            margin-left: 30px;
+            line-height: 40px;
+            cursor: pointer;
+
+        }
+
+        .img2{
+            /*margin: 0 auto;*/
+            width: 150px;
+            height: 150px;
+            margin-top: -85px;
+            margin-bottom: -85px;
+            margin-left: auto;
+            margin-right:  auto;
+            position: relative;
+            border-radius: 100%;
+            background:white;
+        }
+        .img3{
+            /*margin: 0 auto;*/
+            width: 140px;
+            height: 140px;
+            padding-top: 10px;
+            margin-top: -68px;
+            margin-bottom: -68px;
+            margin-left: auto;
+            margin-right:  auto;
+            position: relative;
+            border-radius: 100%;
+            background: white;
+        }
+/*个人中心导航栏*/
+
+.nav3{padding-top: 10px}
+
+        table{ list-style:none;
+            text-align: left;
+            font-size: large ;
+            font-family: 楷体;
+
+        }
+
+    </style>
+</head>
+<body onload=p1() >
+<!--onload="t9()"-->
+<div id="mn"style="width:100%;height:800px;">
+
+<div class="main" style="width: 100%;height: 45px;position: fixed;z-index: 200; background:rgb(50, 49, 60);" >
+<!--    box-shadow: #dcd8d8 5px 5px 15px 1px ;-->
+    <span><a href="index.html"  style="font-size: 25px">首页</a></span>
+    <span><a id="t1" >基本信息</a></span>
+    <span><a id="t2" onclick=p2()>创建项目</a></span>
+    <span><a id="t3" onclick=p3()>参与过的项目</a></span>
+    <span><a id="t4" onclick="p4()">喜欢过</a></span>
+    <!--个人中心导航栏-->
+    <div class="nav1" >
+
+
+<!--    <div class="nav2">-->
+<!--    <table class="mymasg" style="height: 20px;width: 99%;padding-left: 15px;text-align: center;background:#F8F8F8 ;border-radius: 10px;box-shadow: #dcd8d8 1px 5px 5px 1px ;">-->
+<!--    <tr >-->
+<!--    <td> &nbsp;</td>-->
+<!--    <td style="border-right: 2px grey solid"><a href="index2.html"><img src="../img/消息%20(2).png"  style="width: 18px;height: 18px"/> 首页</a></td>-->
+<!--    <td style="border-right: 2px grey solid" ><a  target="_self" id="t1" onclick=p1()><img src="../img/纯天然.png" style="width: 18px;height: 18px"/> 基本信息</a></td>-->
+<!--    <td style="border-right: 2px grey solid"><a id="t2"onclick=p2()><img src="../img/处方.png" style="width: 18px;height: 18px"/> 创建的项目</a></td>-->
+<!--    <td style="border-right: 2px grey solid"><a id="t3"onclick=p3()><img src="../img/灵感.png" style="width: 18px;height: 18px"/> 参与过的项目</a></td>-->
+<!--    <td style="border-right: 2px grey solid"><a id="t4"onclick=p4()><img src="../img/喜欢.png" style="width: 18px;height: 18px"/> 喜欢过的项目</a></td>-->
+<!--    <td  id="t5" onclick="p5()"><a ><img src="../img/消息%20(2).png" style="width: 18px;height: 18px"/> 评论</a></td>-->
+<!--    <td> &nbsp;</td><td> &nbsp;</td><td> &nbsp;</td>-->
+<!--    </tr>-->
+
+<!--    </table>-->
+
+    </div>
+
+
+<!--    </div>-->
+</div>
+<div  id="pass"  style="width: 100%;height:800px;position: relative;padding-top: 28px">
+</div>
+</div>
+</body>
+<script>
+    function mn()
+    { document.getElementById("mn").innerHTML = '<iframe  src="index.html"    data="index.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+    function p1()
+    { document.getElementById("pass").innerHTML = '<iframe  src="PersonInfo.html"    data="PersonInfo.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+
+    function p2()
+    { document.getElementById("pass").innerHTML = '<iframe  src="newproject.html"    data="myproject.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+
+    function p3()
+    { document.getElementById("pass").innerHTML = '<iframe  src="joinproject.html"    data="joinproject.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+
+    function p4()
+    { document.getElementById("pass").innerHTML = '<iframe  src="MyCollection.html"    data="fstvlproject.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+
+    function p5()
+    { document.getElementById("pass").innerHTML = '<iframe  src="message0.html"    data="message0.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+        function t9()
+    {document.getElementById("pass").innerHTML = '<iframe  src="my3bg.html"    data="my3bg.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+</script>
+</html>
