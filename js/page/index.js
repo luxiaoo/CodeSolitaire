@@ -1,5 +1,4 @@
-var BASE_URL
-
+var BASE_URL = 'localhost'
 var uname = null, pho = null;
 //验证码
 var iscode = null;
@@ -53,13 +52,11 @@ function denglu() {
     da = JSON.stringify(j);
     res = Ajaxfun('http://47.94.18.218:8006/Judge_login/judgelogin', da);
     if (res.state === 1) {
-        spop({ tempdir: "登陆成功", aytoclose: 2000 });
-        document.getElementById("login").innerHTML = "欢迎您！" + res.uname;
-        // uname=res.uname;
-        // window.location.href="index2.html";
+        //spop({ tempdir: "登陆成功", aytoclose: 2000 });
+        alert("登陆成功")
     }
     else if (res.state === 0) {
-        document.getElementById("login").innerHTML = "注册成功，点击这里完善您的信息嗷，(●'◡'●)";
+        // document.getElementById("login").innerHTML = "注册成功，点击这里完善您的信息嗷，(●'◡'●)";
     }
 }
 
@@ -226,17 +223,16 @@ $('#tip').focus(function(){
 
 let recommend = document.getElementById('recommend');
 
-const addElement = (parent, child, className, content) => {
+var addElement = (parent, child, className, content) => {
     var Element = document.createElement(child);
     Element.className = className;
-    // Element.setAttribute("id",id);
     Element.innerHTML = content;
     parent.appendChild(Element);
 }
 
 
 //动态加载热门推荐
-const addHotRecommend = (Title, Describe, ImgSrc, UserName, i) => {
+var addHotRecommend = (Title, Describe, ImgSrc, UserName, i) => {
     addElement(recommend, "li", "child_spot", null)
     let _child_spot = document.getElementsByClassName("child_spot")[i];
     addElement(_child_spot, 'div', 'title', null);
@@ -285,9 +281,9 @@ fetch(BASE_URL + "/1")
             addHotRecommend(item.title, item.Describe, item.ImgSrc, item.UserName, index)
         })
     })
-    .catch(() => {
-        alert("请求失败");
-    })
+    // .catch(() => {
+    //     alert("请求失败");
+    // })
 
 
 

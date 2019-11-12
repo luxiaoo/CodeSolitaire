@@ -1,0 +1,128 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    height: 90%;
+    width: 90%;
+    font-family: Verdana;
+    background-image: url("../images/timg (8).jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#ide{
+    height: 100%;
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 2%;
+    /*background-color: blue;*/
+}
+
+#idediv{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 20px;
+    background: white;
+    opacity: 0.7;
+}
+
+#editdiv{
+    height: 5%;
+    width: 100%;
+    /*background: black;*/
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+    border-bottom: 1px solid black;
+}
+
+
+
+#textdiv{
+    height: 90%;
+    width: 100%;
+    /*background-color: blanchedalmond;*/
+}
+
+#filediv{
+    height: 100%;
+    width: 2%;
+    /*background-color: beige;*/
+    float: left;
+    border-right: 1px solid black;
+    /*border-top-left-radius: 20px;*/
+}
+
+#file{
+    height: 100%;
+    width: 15%;
+    /*background-color: #333333;*/
+    float: left;
+    border-right: 1px solid black;
+}
+#filetoogle{
+    /*height: 5%;*/
+    /*width: 2%;*/
+    text-align: center;
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg); /* Internet Explorer 9*/
+    -moz-transform:rotate(90deg); /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg); /* Opera */
+    filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    /*border:1px solid black;*/
+}
+
+#textareaide{
+    height: 100%;
+    width: 83%;
+    margin-left: 17%;
+    padding-left: 17%;
+    /*float: left;*/
+    /*background-color: blueviolet;*/
+}
+
+
+
+
+#resultdiv{
+    height: 5%;
+    width: 100%;
+    /*background: black;*/
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+    border-top: 1px solid black;
+}
+
+
+#textarea {
+    height: 200px;
+    width: 90%;
+    opacity: 0.5;
+    overflow: auto;
+    margin-left: -20%;
+    /*color: green;*/
+    font-size: 16px;
+    border: 1px solid #888;
+    resize: vertical;
+}
+/*#textarea{*/
+/*    height: 300px;*/
+/*    width: 90%;*/
+/*    opacity: 0.5;*/
+/*    overflow: auto;*/
+/*    margin-left: -20%;*/
+/*    !*color: green;*!*/
+/*    font-size: 16px;*/
+/*}*/
+
+
+
+#textarea:empty:before {
+    content: attr(placeholder);
+    color: #bbb;
+}
+

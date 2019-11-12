@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;width: 100%">
+<head>
+	<meta charset="UTF-8">
+	<title>dEMO</title>
+	<style>
+	body{
+		height: 100%;
+		width: 100%;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		font-family: Verdana;
+		background: white no-repeat center center fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+	}
+
+	#ide{
+		width: 100%;
+		height: 100%;
+		padding-left: 5%;
+	}
+
+	#editor {
+		height: 400px;
+		width: 90%;
+		opacity: 0.6;
+		overflow: auto;
+		font-size: 16px;
+		border: 1px solid black;
+	}
+	#bianyi{
+		height: 30px;
+		width: 90%;
+		background-color: white;
+		opacity: 0.6;
+		margin-top: -5px;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border: 1px solid black;
+		font-family: 楷体;
+		/*overflow-x: auto;*/
+		/*overflow-y: auto;*/
+	}
+	#bian{
+		height:100%;
+		width: 20%;
+		color: black;
+		font-size: 20px;
+		text-align: center;
+		float: left;
+		border-right: 1px solid black;
+	}
+
+	#debug{
+		height:100%;
+		width: 20%;
+		color: black;
+		font-size: 20px;
+		text-align: center;
+		float: left;
+		border-right: 1px solid black;
+	}
+
+	#stop{
+		height:100%;
+		width: 20%;
+		color: black;
+		font-size: 20px;
+		text-align: center;
+		float: left;
+		border-right: 1px solid black;
+	}
+		#result{
+			height: 100px;
+			width: 90%;
+			background-color: white;
+			opacity: 0.6;
+			/*margin-top: -5px;*/
+			border: 1px solid black;
+			overflow-x: auto;
+			overflow-y: auto;
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
+
+    </style>
+</head>
+<body style="height: 100%;width: 100%">
+<div id="ide" onclick="getCursortPosition(editor)">
+	<div id="bianyi">
+		<div id="bian">
+			<span>编译</span>
+		</div>
+		<div id="debug">
+			<span>Debug</span>
+		</div>
+		<div id="stop">
+			<span>停止</span>
+		</div>
+	</div>
+	<div id="editor"></div>
+	<script type="text/javascript" src="ace-builds-master/src-noconflict/ace.js"></script>
+	<script type="text/javascript" src="ace-builds-master/src-noconflict/ext-language_tools.js"></script>
+	<script>
+		var editor = ace.edit("editor");
+		editor.setTheme("ace/theme/tomorrow");
+		editor.getSession().setMode("ace/mode/java");
+		editor.setOptions({
+			enableBasicAutocompletion: true,
+			enableSnippets: true,
+			enableLiveAutocompletion: true
+		})
+	</script>
+	<!---取词，取到空格之前--->
+	<script type="text/javascript">
+		function getCursortPosition (textDom) {
+			var cursorPos = 0;
+			if (document.selection) {
+				// IE Support
+				textDom.focus ();
+				var selectRange = document.selection.createRange();
+				selectRange.moveStart ('character', -textDom.value.length);
+				cursorPos = selectRange.text.length;
+			}else if (textDom.selectionStart || textDom.selectionStart === '0') {
+				// Firefox support
+				cursorPos = textDom.selectionStart;
+			}
+			console.log(cursorPos);
+			aa(cursorPos);
+			return cursorPos;
+		}
+		function aa(cursorPos) {
+			var i=cursorPos-1;
+			var j=cursorPos-1;
+			var ee=document.getElementById("editor").value;
+			var myArray=ee.split('');
+			// console.log(myArray[5]);
+			if(cursorPos===0){
+				var i=cursorPos;
+				var j=cursorPos;
+			}
+			for ( ;i>0;i--)
+			{
+				if(myArray[i]===" "){
+					i++;
+					break
+				}
+			}
+			for ( ;j<myArray.length;j++) {
+				if (myArray[j] === " " && j !== cursorPos - 1) {
+					j--;
+					break
+				}
+			}
+			var aaa=myArray.slice(i,j+1).join('');
+			console.log(aaa);
+			//aaa为取到的词
+		}
+	</script>
+	<div id="result"></div>
+</div>
+<script rel="stylesheet" src="js/jquery-3.3.1.js"></script>
+<script rel="stylesheet" src="js/jquery-3.3.1.min.js"></script>
+<script src="./js/jquery-1.12.0.min.js"></script>
+<script src="./js/auto-line-number.js"></script>
+<script>
+	// var artext=$("#textarea").val()
+	$(document).ready(function () {
+		$("#bian").click(function () {
+			alert($("#editor").val());
+			console.log($("#editor").val())
+		})
+	})
+</script>
+</body>
+</html>
+
+
+
+
