@@ -65,17 +65,20 @@
             font-family: 楷体;
 
         }
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
 
     </style>
 </head>
-<body onload=p1() >
-<!--onload="t9()"-->
+<body onload=t9()>
 <div id="mn"style="width:100%;height:800px;">
 
 <div class="main" style="width: 100%;height: 45px;position: fixed;z-index: 200; background:rgb(50, 49, 60);" >
 <!--    box-shadow: #dcd8d8 5px 5px 15px 1px ;-->
     <span><a href="index.html"  style="font-size: 25px">首页</a></span>
-    <span><a id="t1" >基本信息</a></span>
+    <span><a id="t1" onclick="p1()" >基本信息</a></span>
     <span><a id="t2" onclick=p2()>创建项目</a></span>
     <span><a id="t3" onclick=p3()>参与过的项目</a></span>
     <span><a id="t4" onclick="p4()">喜欢过</a></span>
@@ -125,6 +128,6 @@
     function p5()
     { document.getElementById("pass").innerHTML = '<iframe  src="message0.html"    data="message0.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
         function t9()
-    {document.getElementById("pass").innerHTML = '<iframe  src="my3bg.html"    data="my3bg.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+    {document.getElementById("pass").innerHTML = '<iframe  src="Mybackground.html"    data="Mybackground.html"  width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
 </script>
 </html>
