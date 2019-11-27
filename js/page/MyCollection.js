@@ -1,4 +1,5 @@
 var URL = 'localhost'
+
 var addElement = (parent, child, className, content) => {
     var Element = document.createElement(child);
     Element.className = className;
@@ -25,8 +26,9 @@ var addCollectionDiv = (i, imgSrc, name, time, area, title, content) => {
     addElement(_showAll, 'a', 'read', '阅读全文');
     let _read = document.getElementsByClassName('read')[i];
     _read.setAttribute('href', '../html/CntnMainproject.html');
-}
 
+}
+//文章数量
 
 //假接口
 

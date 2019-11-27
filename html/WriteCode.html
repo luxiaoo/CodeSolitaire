@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .tit0 {
+        position: relative;
+height: 60px;
+
+
+    }
+
+    .tit5{
+        position: relative;
+    }
+    .tit1{
+        width: 15%;
+        font-family: 楷体;
+        font-size: 20px ;
+        position: relative;
+        float: left;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+
+
+
+    }
+    .tit2{
+        width: 80%;
+        height: 25px;
+        position: relative;
+        float: left;
+        color: #cccccc;
+    }
+    .tit3{
+        width: 80%;
+        height: 40px;
+        position: relative;
+        float: left;
+        color: #cccccc;
+    }
+</style>
+<body onload="t()">
+<div style="" id="write" ></div>
+<div style="height: 300px;width: 80%;margin-top: 10px">
+    <div style="width:82%;position: relative;float: right;margin: 0 auto;">
+        <div style="width:15%;position: relative;float: left;text-align: center "><input type="button" value="发布"/></div>
+        <div style="width:15%;position: relative;float: left;text-align: center "><input type="button" value="取消"/></div>
+    </div>
+</div>
+<script>
+    function t()
+    { document.getElementById("write").innerHTML = '<iframe  id="iframepage" src="../ide/index.html"  width="100%" margin="0 auto"  data="../ide/index.html" frameborder="no"onload="iFrameHeight()"></iframe>';}
+</script>
+<script>
+    function iFrameHeight() {
+        var ifm= document.getElementById("iframepage");
+        var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+        console.log(ifm,subWeb)
+        if(ifm != null && subWeb != null) {
+            ifm.height = subWeb.body.scrollHeight+10;
+            ifm.width = subWeb.body.scrollWidth;
+        }
+    }
+</script>
+<script type="text/javascript" src="../jquery/jquery-3.4.1.js"></script>
+</body>
+</html>

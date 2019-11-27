@@ -41,6 +41,20 @@
 </body>
 <script>
     function t()
-        { document.getElementById("new2").innerHTML = '<iframe  src="new2.html"    data="new2.html" width="100%" height="100%" frameborder="no" scrolling="no"></iframe>';}
+    { document.getElementById("new2").innerHTML = '<iframe  id="iframepage" src="new2.html"  width="100%" margin="0 auto"  data="new2.html" frameborder="no"onload="iFrameHeight()"></iframe>';}
 </script>
+<script>
+    function iFrameHeight() {
+        var ifm= document.getElementById("iframepage");
+        var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+        console.log(ifm,subWeb)
+        if(ifm != null && subWeb != null) {
+            ifm.height = subWeb.body.scrollHeight+10;
+            ifm.width = subWeb.body.scrollWidth;
+        }
+    }
+</script>
+<script type="text/javascript" src="../jquery/jquery-3.4.1.js"></script>
+
+
 </html>

@@ -25,10 +25,10 @@
         </a>
     </div>
     <div style="height: 30px;background: gainsboro;color: black;opacity:0.5; line-height: 30px">
-        <h5 style="font-family: 楷体 ;font-size: 15px">共创建 x 篇文章</h5>
+        <h5 style="font-family: 楷体 ;font-size: 15px">共创建 <scan id="page" onload="pages()" >x</scan> 篇文章</h5>
     </div>
     <div style="width: 100%;height: auto";>
-        <div>文章内容</div>
+        <div id="MyCollection"></div>
 
     </div>
 </div>
@@ -37,4 +37,7 @@
 <script src="../../static/jquery/jquery-1.11.1.min.js"></script>
 <link href="../../static/materialize/css/materialize.min.css" rel="stylesheet">
 <script src="../../static/materialize/js/materialize.min.js"></script>
+
+<script src="../js/page/MyCollection.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/MyCollection.css" />
 </html>

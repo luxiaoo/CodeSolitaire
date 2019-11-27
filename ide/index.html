@@ -20,7 +20,7 @@
 	#ide{
 		width: 100%;
 		height: 100%;
-		padding-left: 5%;
+		padding-left: 3%;
 	}
 
 	#editor {
@@ -91,13 +91,10 @@
 <body style="height: 100%;width: 100%">
 <div id="ide" onclick="getCursortPosition(editor)">
 	<div id="bianyi">
-		<div id="bian">
+		<div id="bian" onclick="compile()">
 			<span>编译</span>
 		</div>
-		<div id="debug">
-			<span>Debug</span>
-		</div>
-		<div id="stop">
+		<div id="stop" onclick="stopcomplie()">
 			<span>停止</span>
 		</div>
 	</div>
