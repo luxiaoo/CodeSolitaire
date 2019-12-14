@@ -6,12 +6,11 @@
     <meta charset="UTF-8">
     <title>代码接龙</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
-    <link rel="stylesheet" href="../css/test.css">
+    <link rel="stylesheet" href="../css/test.css"/>
     <!-- <link rel="stylesheet" type="text/css" href="../css/slideshow.css" /> -->
     <link rel="stylesheet" type="text/css" href="../css/index.css" />
     <link rel="stylesheet" type="text/css" href="../css/font/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="../css/slide.css" />
-
     <script type="text/javascript" src="../jquery/jquery-3.4.1.js"></script>
 
 </head>
@@ -31,7 +30,7 @@
         <ul id="header">
             <li>
                 <div class="search">
-                    <input type="text" id="input_search" placeholder="search">
+                    <input type="text" id="input_search" onclick="search1()" placeholder="search">
                     <em class="iconfont icon-sousuo"></em>
                 </div>
                 <div id="tip">
@@ -39,7 +38,7 @@
             </li>
             <li>
                 <em class="iconfont shoucang"></em>
-                <a href="MyCollection.html"> 我的收藏 </a>
+                <a  onclick="shoucang()"> 我的收藏 </a>
             </li>
             <li>
                 <em class="iconfont xiangmu"></em>
@@ -104,7 +103,7 @@
         </div>
 
     </div>
-
+<div id="search1">
     <!--轮播-->
     <div class="al" id='al'>
         <div id="title">
@@ -161,7 +160,7 @@
             </li> -->
         </div>
     </div>
-
+</div>
 <script>
     function dowith() {
 
@@ -174,13 +173,33 @@
         }
     }
 </script>
-<script src="../js/Carousel.js"></script>
-<script type="text/javascript" src="../js/page/index.js"></script>
-<script type="text/javascript" src="../js/page/Ajaxfun.js"></script>
-<script type="text/javascript" src="../js/page/fstvlproject2.js"></script>
-<script type="text/javascript" src="../js/slide.js"></script>
+    <script>
+    function search1()
+    {
+    document.getElementById("search1").innerHTML = '<iframe  id="iframepage" src="search.html"    data="search.html"  width="100%" frameborder="no" scrolling="no"onload="iFrameHeight()"></iframe>';
+    }
+    function shoucang()
+    {
+        document.getElementById("search1").innerHTML = '<iframe  id="iframepage" src="joinproject.html"  style="margin-top: 50px"  data="joinproject.html"  width="100%" frameborder="no" scrolling="no"onload="iFrameHeight()"></iframe>';
+    }
+
+    </script>
+    <script>
+        function iFrameHeight() {
+            var ifm= document.getElementById("iframepage");
+            var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+            console.log(ifm,subWeb)
+            if(ifm != null && subWeb != null) {
+                ifm.height = subWeb.body.scrollHeight+10;
+                ifm.width = subWeb.body.scrollWidth;
+            }
+        }
+    </script>
+    <script src="../js/Carousel.js"></script>
+    <script type="text/javascript" src="../js/page/index.js"></script>
+    <script type="text/javascript" src="../js/page/Ajaxfun.js"></script>
+    <script type="text/javascript" src="../js/page/fstvlproject2.js"></script>
+    <script type="text/javascript" src="../js/slide.js"></script>
     <script type="text/javascript" src="../jquery/jquery-3.4.1.js"></script>
-
-
 </body>
 </html>

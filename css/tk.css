@@ -1,0 +1,212 @@
+
+* {
+
+    padding: 0;
+
+    margin: 0;
+
+}
+
+.flex-container {
+
+    display: -webkit-flex;
+
+    display: flex;
+
+    -webkit-justify-content: space-between;
+
+    justify-content: space-between;
+
+}
+
+.window {
+
+    width: 30%;
+    height: 40%;
+
+    padding-bottom: 20px;
+
+    background-color: #fff;
+
+    position: fixed;
+
+    display: none;
+
+    margin-bottom: 100px;
+
+    border: 1px solid #E0DFDF;
+
+}
+
+.add_btn {
+
+    height:40px;
+
+    cursor: pointer;
+
+}
+
+.btn_text {
+
+    width: 70px;
+
+    height: 35px;
+
+    line-height: 35px;
+
+    text-align: center;
+
+    color: #fff;
+
+    position: absolute;
+    border-radius: 13px;
+
+
+    /*top: 50%;*/
+
+    /*left: 50%;*/
+
+    /*margin-top: -40px;*/
+
+    /*margin-left: -20px;*/
+
+    background-color: #c0d5d1;
+
+}
+
+.border_add_nav {
+
+    width: 100%;
+
+    border-bottom: 1px solid #E0DFDF;
+
+}
+
+.border_add_nav_box {
+
+    width: 90%;
+
+    margin: 0 auto;
+
+    font-size: 16px;
+
+}
+
+.border_add_main_content {
+
+    width: 100%;
+
+    margin-left: 5%;
+
+    margin-bottom: 3%;
+
+    overflow: hidden;
+
+    overflow-y: auto;
+
+}
+
+.border_add_btn_box {
+
+    width: 90%;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+}
+
+.add_title {
+
+    color: #20AAE4;
+
+}
+
+.name,
+
+.input {
+
+
+    float: left;
+
+}
+
+.input {
+
+    width: 30px;
+
+    height: 30px;
+
+    text-align: center;
+
+    outline: none;
+
+    appearance: none;
+
+    -moz-appearance: none;
+
+    border-radius: 4px;
+
+    border: 1px solid #c8cccf;
+
+    color: #000;
+
+}
+
+.cancel,
+
+.save {
+
+    width: 80px;
+
+    height: 40px;
+
+    line-height: 40px;
+
+    float: left;
+
+    color: #fff;
+
+    text-align: center;
+
+    border-radius: 5%;
+
+    cursor: pointer;
+
+}
+
+.cancel {
+
+    margin-right: 10px;
+
+    background: #E0DFDF;
+
+}
+
+.save {
+
+    background: #20AAE4;
+
+}
+
+.mask {
+
+    position: absolute;
+
+    top: 0;
+
+    display: none;
+
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+.name {
+    padding-top: 15px;
+    width: 90%;
+    font-family: 楷体;
+    line-height: 30px;
+    /*font-size: 15px;*/
+}

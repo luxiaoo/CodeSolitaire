@@ -53,11 +53,11 @@ height: 60px;
 <!--    </div>-->
     <div class="tit0" >
        <div class="tit1">标题:</div>
-        <div class="tit2"> <input  class="tit2" type="text" value="一个有趣的标题更能吸引人哦"></div>
+        <div class="tit2"> <input  id="tit2" class="tit2" type="text" value="一个有趣的标题更能吸引人哦"></div>
     </div>
     <div class="tit0" >
         <div class="tit1">描述:</div>
-        <div class="tit2"> <input  class="tit3" type="text" value="请您尽可能详细的描述您要完成的功能"></div>
+        <div class="tit2"> <input  id="tit3" class="tit3" type="text" value="请您尽可能详细的描述您要完成的功能"></div>
     </div>
 <!--    <div style="height: 300px;width: 80%">-->
 <!--        <div class="tit1">代码编写:</div>-->
@@ -69,11 +69,15 @@ height: 60px;
 </div>
 <div style="height: 300px;width: 80%;margin-top: 10px">
     <div style="width:82%;position: relative;float: right;margin: 0 auto">
-        <div style="width:15%;position: relative;float: left;text-align: center "><input type="button" value="代码编写" onclick="location='WriteCode.html'" /></div>
-        <div style="width:15%;position: relative;float: left;text-align: center "><input type="button" value="取消"/></div>
+        <div style="width:15%;position: relative;float: left;text-align: center ">
+            <button  id="btn1" value=""><a href="WriteCode.html"onclick="NewP()" style="text-decoration:none;color: black">代码编写</a></button>
+<!--            onclick="location='WriteCode.html'"-->
+        </div>
+        <div style="width:15%;position: relative;float: left;text-align: center ">
+            <input type="button"onclick="close()" value="取消"/>
+        </div>
     </div>
 </div>
-<script>
-</script>
+<script src="../js/page/addjs.js"></script>
 </body>
 </html>

@@ -91,10 +91,10 @@
 <body style="height: 100%;width: 100%">
 <div id="ide" onclick="getCursortPosition(editor)">
 	<div id="bianyi">
-		<div id="bian" onclick="compile()">
+		<div id="bian" onclick="compile()" style="cursor: pointer">
 			<span>编译</span>
 		</div>
-		<div id="stop" onclick="stopcomplie()">
+		<div id="stop" onclick="stopcomplie()"style="cursor: pointer">
 			<span>停止</span>
 		</div>
 	</div>
@@ -163,6 +163,7 @@
 <script rel="stylesheet" src="js/jquery-3.3.1.min.js"></script>
 <script src="./js/jquery-1.12.0.min.js"></script>
 <script src="./js/auto-line-number.js"></script>
+<script src="../js/page/addjs.js"></script>
 <script>
 	// var artext=$("#textarea").val()
 	$(document).ready(function () {
