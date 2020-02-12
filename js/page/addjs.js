@@ -5,10 +5,12 @@ function compile() {
     var j = {};
     var da, res;
     alert("请稍后");
+
     j.yc = document.getElementById("yuandaima").value;
-    j.xc = document.getElementById("ace_content").value;
+    j.xc = document.getElementsByClassName("ace_active-line").Text;
     da = JSON.stringify(j);
-    res = Ajaxfun('', da);
+    console.log(j+'-------------------------------------------------------');
+   res = Ajaxfun('', da);
     if (res == 'OK') {
         document.getElementById('result').innerHTML = 'OK';
     }
@@ -98,14 +100,7 @@ function ycode() {
     da=JSON.stringify(j);
     console.log(da);
 }
-//查看本篇文章详情（joinproject）
-function  Detail() {
-    var j = {};
-    var da, res;
-
-
-}
-//搜索
+//搜索-----------------复用
 function search() {
     var j = {};
     var da, res;
@@ -128,8 +123,6 @@ function AddMes() {
     da=JSON.stringify(j);
     res=Ajaxfun('',da);
     //返回数据放置位置
-
-
 
 }
 //续写按钮
